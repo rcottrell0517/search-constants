@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Thermal Constants</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+      body {
+        background: #f7f7f7;
+        font-family: "New Tegomin", sans-serif;
+        color: darkorange;
+        padding: 50px 0;
+      }
+
+      .container1 {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .nav1 {
+        position: fixed;
+        background-color: #222;
+        /* top left and right set to zero makes the bar span all the way across */
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .nav1 .container1 {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        height: 10px;
+      }
+
+      .nav1 ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav1 a {
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 15px;
+      }
+
+      .nav1.active {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav1.active a {
+        color: #000;
+      }
+
+      .nav1.active .container1 {
+        padding: 10px 0;
+      }
+
+      /* this means nav a current "or" nav a hover */
+      .nav1 a:hover {
+        color: #c0392b;
+        font-weight: bold;
+      }
+
+      .container {
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .lol {
+        margin: 0 15px 25px;
+        flex-basis: 50%;
+      }
+
+      .column {
+        padding: 15px 25px;
+      }
+
+      label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+        margin-bottom: 15px;
+        font-weight: bolder;
+      }
+
+      input {
+        padding: 5px 10px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav1">
+      <div class="container1">
+        <h1 class="logo">
+          <a href="/">Find Bushing Thermal Contants</a>
+        </h1>
+        <ul>
+          <li><a href="/" class="current">Landing Page</a></li>
+          <!-- <li><a href="fetchTconstantsCalc_dev.html">Loss of Life</a></li> -->
+          <li>
+            <a href="/users/dashboard">Thermal Constant Search</a>
+          </li>
+          <li>
+            <a href="/users/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <span id="date">Started Calculating at:</span>
+    <h1 id="po"></h1>
+    <div class="container">
+      <div class="lol">
+        <div class="column">
+          <!-- <h1>Inputs for Loss of Life</h1> -->
+          <label>K1:</label>
+          <input type="number" id="K1" name="array[]" value="" /><br />
+          <label>K2:</label>
+          <input type="number" id="K2" name="array[]" value="" /><br />
+          <label>n:</label>
+          <input type="number" id="n" name="array[]" value="" /><br />
+          <label>Bushing Time Constant:</label>
+          <input
+            type="number"
+            id="timeConstant"
+            name="array[]"
+            value=""
+          /><br />
+          <label>What is the rated current?</label>
+          <input
+            type="number"
+            id="Whatistheratedcurrent"
+            name="array[]"
+            value=""
+          /><br />
+          <label>What is the operating current?</label>
+          <input
+            type="number"
+            id="Whatistheoperatingcurrent"
+            name="array[]"
+            value=""
+          /><br />
+          <label>What is the overload current?</label>
+          <input
+            type="number"
+            id="Whatistheoverloadcurrent"
+            name="array[]"
+            value=""
+          /><br />
+          <label
+            >What is the total elapsed time of the overload in minutes?</label
+          >
+          <input
+            type="number"
+            id="Whatisthetotalelapsedtimeoftheoverloadinminutes"
+            name="array[]"
+            value=""
+          /><br />
+          <label>What is the transformer oil time constant in minutes?</label>
+          <input
+            type="number"
+            id="Whatisthetransformeroiltimeconstantinminutes"
+            name="array[]"
+            value=""
+          /><br />
+          <label>
+            What is the top oil temperature rise before overload in
+            Celsius?</label
+          >
+          <input
+            type="number"
+            id="WhatisthetopoiltemperaturerisebeforeoverloadinCelsius"
+            name="array[]"
+            value=""
+          /><br />
+          <label
+            >What is the top oil temperature rise after overload in
+            Celsius?</label
+          >
+          <input
+            type="number"
+            id="WhatisthetopoiltemperatureriseafteroverloadinCelsius"
+            name="array[]"
+            value=""
+          /><br />
+          <label>What is the maximum ambient in Celsius?</label>
+          <input
+            type="number"
+            id="WhatisthemaximumambientinCelsius"
+            name="array[]"
+            value=""
+          />
+        </div>
+      </div>
+      <div class="lol">
+        <div class="column">
+          <!-- <h1>Outputs for Loss of Life</h1> -->
+          <label>I = per Unit Current before Overload:</label>
+          <input
+            type="number"
+            id="perUnitCurrentbeforeOverload"
+            name="array[]"
+            value=""
+          /><br />
+          <label>I = per Unit Current at Overload:</label>
+          <input
+            type="number"
+            id="perUnitCurrentatOverload"
+            name="array[]"
+            value=""
+          /><br />
+          <label>Hottest Spot Rise before Overload (C):</label>
+          <input
+            type="number"
+            id="HottestSpotRisebeforeOverload"
+            name="array[]"
+            value=""
+          /><br />
+          <label>Delta Hottest Spot Rise Due to Overload (C):</label>
+          <input
+            type="number"
+            id="DeltaHottestSpotRiseDuetoOverload"
+            name="array[]"
+            value=""
+          /><br />
+          <label>Hottest Spot Rise at end of Overload (C):</label>
+          <input
+            type="number"
+            id="HottestSpotRiseatendofOverload"
+            name="array[]"
+            value=""
+          /><br />
+          <label>Hottest Sopt Absolute at end of Overload (C):</label>
+          <input
+            type="number"
+            id="HottestSpotAbsoluteatendofOverloadC"
+            name="array[]"
+            value=""
+          /><br />
+          <label>Hottest Spot Absolute at end of Overload (K):</label>
+          <input
+            type="number"
+            id="HottestSpotAbsoluteatendofOverloadK"
+            name="array[]"
+            value=""
+          />
+        </div>
+        <button type="button" name="button" onclick="doCalculation()">
+          Submit
+        </button>
+        <p id="par"></p>
+
+        <p id="info"></p>
+      </div>
+    </div>
+
+    <!-- <script src="calcTconstants6.js"></script> -->
+    <script>
+      // Adds date and time to the page
+      document.getElementById("date").innerText = new Date();
+
+      // Puts the focus on the rated current input field
+      window.onload = function () {
+        document.getElementById("Whatistheratedcurrent").focus();
+      };
+
+      // Pulls the data from local storage and adds to the appropriate input fields
+      document.getElementById("K1").value = localStorage.getItem("myTconK1");
+      document.getElementById("K2").value = localStorage.getItem("myTconK2");
+      document.getElementById("n").value = localStorage.getItem("myTconN");
+      document.getElementById("timeConstant").value =
+        localStorage.getItem("myTconTime");
+
+      let d = new Date();
+      let val = d;
+
+      // Adds the style number to the heading of the page
+      document.getElementById("po").innerHTML =
+        localStorage.getItem("myTconStyle") +
+        " Thermal Contants for Calculating The Loss of Life";
+
+      // Calculates both per unit current before, at overload and Hottest Spot Rise before Overload
+      function perUnitCurrentBeforeOverload(x, y) {
+        return x / y;
+      }
+
+      function perUnitCurrentAtOverload(x, y) {
+        return x / y;
+      }
+
+      function doCalculation() {
+        let n1 = Number(
+          document.getElementById("Whatistheoperatingcurrent").value
+        );
+        let n2 = Number(document.getElementById("Whatistheratedcurrent").value);
+        let n3 = Number(
+          document.getElementById("Whatistheoverloadcurrent").value
+        );
+
+        let findPerUnitBeforeOverload = perUnitCurrentBeforeOverload(n1, n2);
+        let findPerUnitAtOverload = perUnitCurrentBeforeOverload(n3, n2);
+
+        document.getElementById("perUnitCurrentbeforeOverload").value =
+          findPerUnitBeforeOverload.toFixed(2);
+        document.getElementById("perUnitCurrentatOverload").value =
+          findPerUnitAtOverload.toFixed(2);
+
+        let K1 = Number(document.getElementById("K1").value);
+        let K2 = Number(document.getElementById("K2").value);
+        let n = Number(document.getElementById("n").value);
+        let WhatisthetopoiltemperaturerisebeforeoverloadinCelsius = Number(
+          document.getElementById(
+            "WhatisthetopoiltemperaturerisebeforeoverloadinCelsius"
+          ).value
+        );
+        let WhatisthetopoiltemperatureriseafteroverloadinCelsius = Number(
+          document.getElementById(
+            "WhatisthetopoiltemperatureriseafteroverloadinCelsius"
+          ).value
+        );
+
+        let Whatisthetotalelapsedtimeoftheoverloadinminutes = Number(
+          document.getElementById(
+            "Whatisthetotalelapsedtimeoftheoverloadinminutes"
+          ).value
+        );
+        let Whatisthetransformeroiltimeconstantinminutes = Number(
+          document.getElementById(
+            "Whatisthetransformeroiltimeconstantinminutes"
+          ).value
+        );
+        let timeConstant = Number(
+          document.getElementById("timeConstant").value
+        );
+
+        // Calculates the value of Hottest Spot Rise before Overload C
+        let results =
+          K1 * findPerUnitBeforeOverload ** n +
+          K2 * WhatisthetopoiltemperaturerisebeforeoverloadinCelsius;
+
+        document.getElementById("HottestSpotRisebeforeOverload").value =
+          results.toFixed(2);
+
+        // Calculates the value of Hottest Spot Rise before Overload C
+        let resultsStep1 = K1 * findPerUnitAtOverload ** n;
+
+        let resultsStep2 =
+          WhatisthetopoiltemperatureriseafteroverloadinCelsius -
+          WhatisthetopoiltemperaturerisebeforeoverloadinCelsius;
+
+        let results2 =
+          (Whatisthetotalelapsedtimeoftheoverloadinminutes /
+            Whatisthetransformeroiltimeconstantinminutes) *
+          -1;
+
+        const EXP = 2.71828182845;
+        const one = 1;
+        let results23 = EXP ** results2;
+
+        let resultsStep3 = one - results23;
+
+        let resultsStep4 =
+          resultsStep2 * resultsStep3 +
+          WhatisthetopoiltemperaturerisebeforeoverloadinCelsius;
+
+        let results5 = resultsStep4 * K2 + resultsStep1;
+
+        let results6 = results5 - results;
+
+        let results7 =
+          (Whatisthetotalelapsedtimeoftheoverloadinminutes / timeConstant) * -1;
+
+        let results8 = EXP ** results7;
+
+        let results9 = one - results8;
+
+        let results10 = results6 * results9;
+
+        document.getElementById("DeltaHottestSpotRiseDuetoOverload").value =
+          results10.toFixed(2);
+
+        // Calculate the addition portions
+        let results15 = results10 + results;
+
+        document.getElementById("HottestSpotRiseatendofOverload").value =
+          results15.toFixed(2);
+
+        let maxAmbient = document.getElementById(
+          "WhatisthemaximumambientinCelsius"
+        ).value;
+
+        let results3 = Number(results15) + Number(maxAmbient);
+
+        document.getElementById("HottestSpotAbsoluteatendofOverloadC").value =
+          results3.toFixed(2);
+
+        let results4 = results3 + 273;
+
+        document.getElementById("HottestSpotAbsoluteatendofOverloadK").value =
+          results4.toFixed(2);
+
+        // Start of calculating the loss of life percentage
+        const A = 14.133;
+        const B = 6972.15;
+        if (results3 > 105) {
+          let theFirstPart =
+            Whatisthetotalelapsedtimeoftheoverloadinminutes / 60;
+          let theSecondPart = B / results4;
+          let theThirdPart = theSecondPart - A;
+          let theForthPart = 10 ** theThirdPart;
+          let theFifthPart = theFirstPart / theForthPart;
+          let theSixthPart = theFifthPart * 100;
+
+          document.getElementById(
+            "info"
+          ).innerHTML = `% Loss of Life per Occurrence = ${theSixthPart.toFixed(
+            3
+          )}%`;
+        } else {
+          document.getElementById("info").innerHTML =
+            "% Loss of Life per Occurrence = None";
+        }
+      }
+
+      //https://www.youtube.com/watch?v=gxOCF5r6BJg
+      //https://www.youtube.com/watch?v=oDUjP4N_MtQ
+      //https://www.youtube.com/watch?v=gxOCF5r6BJg
+      //https://www.youtube.com/watch?v=oDUjP4N_MtQ
+      //https://www.youtube.com/watch?v=lrayWWmzde4
+      // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math
+    </script>
+  </body>
+</html>

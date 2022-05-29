@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    /> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(170, 57, 57);
+        font-family: "Gentium Book Basic", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* need the height to get it to center in the page when using flex */
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .container1 {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .nav1 {
+        position: fixed;
+        background-color: #222;
+        /* top left and right set to zero makes the bar span all the way across */
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .nav1 .container1 {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        height: 50px;
+      }
+
+      .nav1 ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav1 a {
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 15px;
+      }
+
+      .nav1.active {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav1.active a {
+        color: #000;
+      }
+
+      .nav1.active .container1 {
+        padding: 10px 0;
+      }
+
+      /* this means nav a current "or" nav a hover */
+      .nav1 a:hover {
+        color: #c0392b;
+        font-weight: bold;
+      }
+
+      .aTags {
+        display: inline-block;
+        font-size: x-large;
+      }
+
+      .container {
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 350px;
+      }
+
+      .title {
+        margin: 0;
+      }
+
+      .subtitle {
+        display: inline-block;
+        margin: 5px 0 20px;
+        opacity: 0.8;
+      }
+
+      .header {
+        background-color: rgb(255, 170, 170);
+        color: #fff;
+        padding: 30px 20px;
+      }
+
+      .header input {
+        background-color: rgba(0, 0, 0, 0.3);
+        border: 0;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 15px;
+        width: 100%;
+      }
+
+      .header input:focus {
+        outline: none;
+      }
+
+      .header button {
+        width: 70%;
+        border-radius: 8px;
+        background-color: salmon;
+        margin-top: 5px;
+        transition: 0.4s;
+        cursor: pointer;
+        margin-left: 15%;
+      }
+
+      .header button:hover {
+        background-color: sandybrown;
+        color: white;
+      }
+
+      .tconstant-list {
+        background-color: #fff;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        max-height: 400px;
+        /* gives scroll bars if needed */
+        overflow-y: auto;
+      }
+
+      .tconstant-list li {
+        display: flex;
+        padding: 20px;
+      }
+
+      .tconstant-list img {
+        max-width: 100%;
+        height: 100px;
+      }
+
+      .tconstant-list .tconstant-info {
+        margin-left: 10px;
+      }
+
+      .tconstant-list .tconstant-info h2 {
+        margin: 0 0 10px;
+        padding-left: 30px;
+      }
+
+      .tconstant-list .tconstant-info h2 {
+        font-size: 20px;
+      }
+
+      /* border on all but the last using sudo technique */
+      .tconstant-list li:not(:last-of-type) {
+        border-bottom: 1px solid #eee;
+      }
+
+      .tconstant-list li.hide {
+        display: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="aTags">
+      <a href="/users/logout">Logout</a>
+      <a href="/users/calcTconstants12">Thermal Constants</a>
+    </div>
+    <h1>Hello <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
+    <form action="/users/calcTconstants12" method="POST"></form>
+    <div class="container">
+      <header class="header">
+        <h2 class="title">Thermal Constants</h2>
+        <small class="subtitle">Search by Style Number</small>
+        <input
+          type="text"
+          id="filter"
+          placeholder="Search for Thermal Constants"
+        />
+        <button id="doCalc" class="doCalc">Calculate Results</button>
+      </header>
+
+      <ul id="result" class="tconstant-list" style="cursor: pointer">
+        <li id="myLi">
+          <h3>Loading...</h3>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const result = document.getElementById("result");
+      const filter = document.getElementById("filter");
+      const doCalc = document.getElementById("doCalc");
+
+      window.onload = function () {
+        document.getElementById("filter").focus();
+      };
+
+      const listItems = [];
+
+      // console.log(listItems);
+
+      getData();
+
+      // gives us what is typed in
+      filter.addEventListener("input", (e) => filterData(e.target.value));
+      // Execute a function when the user releases a key on the keyboard
+      filter.addEventListener("keyup", function (event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("doCalc").click();
+        }
+      });
+
+      async function getData() {
+        const res = await fetch("/assets/tconstants.json");
+
+        const results = await res.json();
+
+        //   console.log(results);
+
+        // Clear results
+        result.innerHTML = "";
+
+        results.forEach((tconstants) => {
+          //    console.log(tconstants);
+
+          const li = document.createElement("li");
+
+          listItems.push(li);
+
+          li.innerHTML = `
+           
+          
+
+            <img src="${tconstants.picture}">
+            <div class="tconstant-info">
+            <h2>Style: ${tconstants.style}</h2>
+            <h2>K1: ${tconstants.K1}</h2>
+            <h2>K2: ${tconstants.K2}</h2>
+            <h2>n: ${tconstants.n}</h2>
+            <h2>Time Constant: ${tconstants.Time_Constant} min.</h2>
+            
+          
+            </div>
+        `;
+          li.addEventListener("click", function () {
+            let tconStyle = tconstants.style.toUpperCase();
+            let tconK1 = Number(tconstants.K1);
+            let tconK2 = Number(tconstants.K2);
+            let tconN = Number(tconstants.n);
+            let tconTime = Number(tconstants.Time_Constant);
+            // console.log(tconStyle);
+            // console.log(tconK1);
+            // console.log(tconK2);
+            // console.log(tconN);
+            // console.log(tconTime);
+
+            localStorage.setItem("myTconStyle", tconStyle);
+            localStorage.setItem("myTconK1", tconK1);
+            localStorage.setItem("myTconK2", tconK2);
+            localStorage.setItem("myTconN", tconN);
+            localStorage.setItem("myTconTime", tconTime);
+            window.location = "/users/calcTconstants12";
+          });
+
+          result.appendChild(li);
+        });
+      }
+
+      // gives us what is being typed in
+      function filterData(searchTerm) {
+        console.log(searchTerm);
+
+        listItems.forEach((item) => {
+          if (item.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
+            item.classList.remove("hide");
+          } else {
+            item.classList.add("hide");
+          }
+        });
+      }
+
+      doCalc.addEventListener("click", () => {
+        if (filter.value.length < 10) {
+          alert("Enter a full style number!");
+          document.getElementById("filter").focus();
+        } else if (filter.value.length > 10) {
+          alert("Style number is 10 characters long!");
+        } else {
+          info = document.getElementById("filter").value;
+          // console.log(info);
+          const tc = document.getElementsByClassName("tconstant-list");
+          console.log(tc.result.innerText);
+
+          // let temp = JSON.stringify(tc.result.innerText);
+          // localStorage.setItem("obj", temp);
+
+          // window.location = "calcTconstants.html";
+        }
+      });
+    </script>
+  </body>
+</html>
