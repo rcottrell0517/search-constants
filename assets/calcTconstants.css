@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+body {
+  background: #f7f7f7;
+  font-family: "New Tegomin", sans-serif;
+  color: darkorange;
+  padding: 50px 0;
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav1 {
+  position: fixed;
+  background-color: #222;
+  /* top left and right set to zero makes the bar span all the way across */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav1 .container1 {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  height: 10px;
+}
+
+.nav1 ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav1 a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+
+.nav1.active {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav1.active a {
+  color: #000;
+}
+
+.nav1.active .container1 {
+  padding: 10px 0;
+}
+
+/* this means nav a current "or" nav a hover */
+.nav1 a:hover {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.lol {
+  margin: 0 15px 25px;
+  flex-basis: 50%;
+}
+
+.column {
+  padding: 15px 25px;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+
+input {
+  padding: 5px 10px;
+}
+
+h1 {
+  text-align: center;
+}

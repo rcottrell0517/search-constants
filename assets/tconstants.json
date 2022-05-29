@@ -1,0 +1,659 @@
+[
+  {
+    "id": 1,
+    "style": "015J0300AQ",
+    "K1": 15.0,
+    "K2": 0.6,
+    "n": 1.6,
+    "Time_Constant": 30,
+    "picture": "/assets/products/015J0300AQ.jpg"
+  },
+  {
+    "id": 2,
+    "style": "025T0200HR",
+    "K1": 11.7,
+    "K2": 0.89,
+    "n": 2,
+    "Time_Constant": 29,
+    "picture": "/assets/products/025T0200HR.jpg"
+  },
+  {
+    "id": 6,
+    "style": "025V1000VY",
+    "K1": 48.54,
+    "K2": 0.72,
+    "n": 1.56,
+    "Time_Constant": 58,
+    "picture": "/assets/products/025V1000VY.jpg"
+  },
+  {
+    "id": 8,
+    "style": "025T2150HM",
+    "K1": 52.29,
+    "K2": 0.88,
+    "n": 1.89,
+    "Time_Constant": 50,
+    "picture": "/assets/products/025T2150HM.jpg"
+  },
+  {
+    "id": 9,
+    "style": "025V0450WH",
+    "K1": 21.4,
+    "K2": 0.79,
+    "n": 2.13,
+    "Time_Constant": 60,
+    "picture": "/assets/products/025V0450WH.jpg"
+  },
+  {
+    "id": 10,
+    "style": "025W0412AT",
+    "K1": 8.1,
+    "K2": 0.96,
+    "n": 2.78,
+    "Time_Constant": 77,
+    "picture": "/assets/products/025W0412AT.jpg"
+  },
+  {
+    "id": 14,
+    "style": "025W2000BE",
+    "K1": 24.7,
+    "K2": 0.76,
+    "n": 1.63,
+    "Time_Constant": 37,
+    "picture": "/assets/products/025W2000BE.jpg"
+  },
+  {
+    "id": 18,
+    "style": "025W3000BF",
+    "K1": 24.5,
+    "K2": 0.7,
+    "n": 1.8,
+    "Time_Constant": 50,
+    "picture": "/assets/products/025W3000BF.jpg"
+  },
+  {
+    "id": 19,
+    "style": "025W4000UU",
+    "K1": 23.7,
+    "K2": 0.79,
+    "n": 2.23,
+    "Time_Constant": 60,
+    "picture": "/assets/products/025W4000UU.jpg"
+  },
+  {
+    "id": 23,
+    "style": "034W0412AP",
+    "K1": 11.7,
+    "K2": 0.8,
+    "n": 1.9,
+    "Time_Constant": 45,
+    "picture": "/assets/products/034W0412AP.jpg"
+  },
+  {
+    "id": 24,
+    "style": "034W3000BC",
+    "K1": 19.8,
+    "K2": 0.8,
+    "n": 1.8,
+    "Time_Constant": 45,
+    "picture": "/assets/products/034W3000BC.jpg"
+  },
+  {
+    "id": 25,
+    "style": "034W4000BJ",
+    "K1": 26.4,
+    "K2": 0.74,
+    "n": 2.28,
+    "Time_Constant": 35,
+    "picture": "/assets/products/034W4000BJ.jpg"
+  },
+  {
+    "id": 26,
+    "style": "034Z0412UT",
+    "K1": 16.8,
+    "K2": 0.82,
+    "n": 2.22,
+    "Time_Constant": 35,
+    "picture": "/assets/products/034Z0412UT.jpg"
+  },
+  {
+    "id": 27,
+    "style": "034W5000UX",
+    "K1": 30.9,
+    "K2": 0.66,
+    "n": 1.84,
+    "Time_Constant": 70,
+    "picture": "/assets/products/034W5000UX.jpg"
+  },
+  {
+    "id": 28,
+    "style": "046W0412AU",
+    "K1": 17.1,
+    "K2": 0.82,
+    "n": 2.11,
+    "Time_Constant": 52,
+    "picture": "/assets/products/046W0412AU.jpg"
+  },
+  {
+    "id": 29,
+    "style": "046W2000UD",
+    "K1": 25.9,
+    "K2": 0.71,
+    "n": 1.89,
+    "Time_Constant": 52,
+    "picture": "/assets/products/046W2000UD.jpg"
+  },
+  {
+    "id": 36,
+    "style": "069W4000VP",
+    "K1": 22.6,
+    "K2": 0.74,
+    "n": 1.47,
+    "Time_Constant": 85,
+    "picture": "/assets/products/069W4000VP.jpg"
+  },
+  {
+    "id": 41,
+    "style": "115W1216AK",
+    "K1": 15.3,
+    "K2": 0.81,
+    "n": 2.42,
+    "Time_Constant": 82,
+    "picture": "/assets/products/115W1216AK.jpg"
+  },
+  {
+    "id": 42,
+    "style": "115W1216XK",
+    "K1": 15.5,
+    "K2": 0.8,
+    "n": 1.9,
+    "Time_Constant": 120,
+    "picture": "/assets/products/115W1216XK.jpg"
+  },
+  {
+    "id": 43,
+    "style": "115W1620UL",
+    "K1": 13,
+    "K2": 0.74,
+    "n": 1.61,
+    "Time_Constant": 88,
+    "picture": "/assets/products/115W1620UL.jpg"
+  },
+  {
+    "id": 44,
+    "style": "115W3000UC",
+    "K1": 24.7,
+    "K2": 0.72,
+    "n": 1.81,
+    "Time_Constant": 83,
+    "picture": "/assets/products/115W3000UC.jpg"
+  },
+  {
+    "id": 55,
+    "style": "196W1216XP",
+    "K1": 2.3,
+    "K2": 1,
+    "n": 1.95,
+    "Time_Constant": 120,
+    "picture": "/assets/products/196W1216XP.jpg"
+  },
+  {
+    "id": 59,
+    "style": "196W4000UG",
+    "K1": 14,
+    "K2": 0.6,
+    "n": 1.8,
+    "Time_Constant": 60,
+    "picture": "/assets/products/196W4000UG.jpg"
+  },
+  {
+    "id": 65,
+    "style": "345Z1800DD",
+    "K1": 25.52,
+    "K2": 0.72,
+    "n": 2.43,
+    "Time_Constant": 120,
+    "picture": "/assets/products/345Z1800DD.jpg"
+  },
+  {
+    "id": 67,
+    "style": "362W2000UZ",
+    "K1": 15,
+    "K2": 0.55,
+    "n": 1.7,
+    "Time_Constant": 110,
+    "picture": "/assets/products/362W2000UZ.jpg"
+  },
+  {
+    "id": 78,
+    "style": "015J0120AP",
+    "K1": 18.1,
+    "K2": 0.81,
+    "n": 2.06,
+    "Time_Constant": 60,
+    "picture": "/assets/products/015J0120AP.jpg"
+  },
+  {
+    "id": 79,
+    "style": "015J0200AS",
+    "K1": 25.1,
+    "K2": 0.77,
+    "n": 2.23,
+    "Time_Constant": 70,
+    "picture": "/assets/products/015J0200AS.jpg"
+  },
+  {
+    "id": 81,
+    "style": "015J0400AN",
+    "K1": 32.1,
+    "K2": 0.72,
+    "n": 1.44,
+    "Time_Constant": 60,
+    "picture": "/assets/products/015J0400AN.jpg"
+  },
+  {
+    "id": 82,
+    "style": "025N0412AA",
+    "K1": 11.5,
+    "K2": 0.96,
+    "n": 2.12,
+    "Time_Constant": 52,
+    "picture": "/assets/products/025N0412AA.jpg"
+  },
+  {
+    "id": 83,
+    "style": "025N2000AA",
+    "K1": 17.3,
+    "K2": 0.96,
+    "n": 2.16,
+    "Time_Constant": 52,
+    "picture": "/assets/products/025N2000AA.jpg"
+  },
+  {
+    "id": 84,
+    "style": "025N3000AA",
+    "K1": 22.1,
+    "K2": 0.92,
+    "n": 2.02,
+    "Time_Constant": 52,
+    "picture": "/assets/products/025N3000AA.jpg"
+  },
+  {
+    "id": 85,
+    "style": "025T0120HK",
+    "K1": 9.2,
+    "K2": 0.81,
+    "n": 2.55,
+    "Time_Constant": 60,
+    "picture": "/assets/products/025T0120HK.jpg"
+  },
+  {
+    "id": 86,
+    "style": "025T0300KG",
+    "K1": 22.8,
+    "K2": 0.8,
+    "n": 2.21,
+    "Time_Constant": 35,
+    "picture": "/assets/products/025T0300KG.jpg"
+  },
+  {
+    "id": 87,
+    "style": "025V0600WG",
+    "K1": 23.5,
+    "K2": 0.79,
+    "n": 1.49,
+    "Time_Constant": 35,
+    "picture": "/assets/products/025V0600WG.jpg"
+  },
+  {
+    "id": 88,
+    "style": "025V0600WJ",
+    "K1": 27.7,
+    "K2": 0.78,
+    "n": 1.68,
+    "Time_Constant": 62,
+    "picture": "/assets/products/025V0600WJ.jpg"
+  },
+  {
+    "id": 89,
+    "style": "025V0750VW",
+    "K1": 43.8,
+    "K2": 0.77,
+    "n": 2.31,
+    "Time_Constant": 82,
+    "picture": "/assets/products/025V0750VW.jpg"
+  },
+  {
+    "id": 90,
+    "style": "025W2000CF",
+    "K1": 11.6,
+    "K2": 0.87,
+    "n": 2.55,
+    "Time_Constant": 37,
+    "picture": "/assets/products/025W2000CF.jpg"
+  },
+  {
+    "id": 91,
+    "style": "025W2000HM",
+    "K1": 24.9,
+    "K2": 0.76,
+    "n": 1.7,
+    "Time_Constant": 37,
+    "picture": "/assets/products/025W2000HM.jpg"
+  },
+  {
+    "id": 92,
+    "style": "025W2000UE",
+    "K1": 23.4,
+    "K2": 0.77,
+    "n": 1.68,
+    "Time_Constant": 37,
+    "picture": "/assets/products/025W2000UE.jpg"
+  },
+  {
+    "id": 93,
+    "style": "034N3000AA",
+    "K1": 20.8,
+    "K2": 0.92,
+    "n": 2.14,
+    "Time_Constant": 40,
+    "picture": "/assets/products/034N3000AA.jpg"
+  },
+  {
+    "id": 94,
+    "style": "034T0200HQ",
+    "K1": 17.4,
+    "K2": 0.82,
+    "n": 1.93,
+    "Time_Constant": 35,
+    "picture": "/assets/products/034T0200HQ.jpg"
+  },
+  {
+    "id": 95,
+    "style": "034T0450VF",
+    "K1": 29.3,
+    "K2": 0.75,
+    "n": 1.95,
+    "Time_Constant": 70,
+    "picture": "/assets/products/034T0450VF.jpg"
+  },
+  {
+    "id": 96,
+    "style": "034W0412UT",
+    "K1": 14.7,
+    "K2": 0.84,
+    "n": 2.15,
+    "Time_Constant": 35,
+    "picture": "/assets/products/034W0412UT.jpg"
+  },
+  {
+    "id": 97,
+    "style": "034Z2000AA",
+    "K1": 23.4,
+    "K2": 0.76,
+    "n": 1.82,
+    "Time_Constant": 60,
+    "picture": "/assets/products/034Z2000AA.jpg"
+  },
+  {
+    "id": 98,
+    "style": "034Z2000CA",
+    "K1": 17.4,
+    "K2": 0.77,
+    "n": 1.75,
+    "Time_Constant": 60,
+    "picture": "/assets/products/034Z2000CA.jpg"
+  },
+  {
+    "id": 99,
+    "style": "034Z3000AS",
+    "K1": 27.3,
+    "K2": 0.73,
+    "n": 1.97,
+    "Time_Constant": 67,
+    "picture": "/assets/products/034Z3000AS.jpg"
+  },
+  {
+    "id": 100,
+    "style": "046W0412UL",
+    "K1": 17.3,
+    "K2": 0.84,
+    "n": 2.08,
+    "Time_Constant": 52,
+    "picture": "/assets/products/046W0412UL.jpg"
+  },
+  {
+    "id": 101,
+    "style": "069N0412AA",
+    "K1": 17.9,
+    "K2": 0.96,
+    "n": 1.99,
+    "Time_Constant": 52,
+    "picture": "/assets/products/069N0412AA.jpg"
+  },
+  {
+    "id": 102,
+    "style": "069N2000AA",
+    "K1": 20.2,
+    "K2": 0.95,
+    "n": 2.21,
+    "Time_Constant": 47,
+    "picture": "/assets/products/069N2000AA.jpg"
+  },
+  {
+    "id": 103,
+    "style": "069N3000AA",
+    "K1": 22.3,
+    "K2": 0.91,
+    "n": 2.08,
+    "Time_Constant": 60,
+    "picture": "/assets/products/069N3000AA.jpg"
+  },
+  {
+    "id": 104,
+    "style": "069Z0412AN",
+    "K1": 24.5,
+    "K2": 0.77,
+    "n": 2.32,
+    "Time_Constant": 75,
+    "picture": "/assets/products/069Z0412AN.jpg"
+  },
+  {
+    "id": 105,
+    "style": "115W2025AC",
+    "K1": 16.7,
+    "K2": 0.74,
+    "n": 1.74,
+    "Time_Constant": 82,
+    "picture": "/assets/products/115W2025AC.jpg"
+  },
+  {
+    "id": 106,
+    "style": "115Z0800XA",
+    "K1": 22.5,
+    "K2": 0.75,
+    "n": 2.04,
+    "Time_Constant": 100,
+    "picture": "/assets/products/115Z0800XA.jpg"
+  },
+  {
+    "id": 107,
+    "style": "138Z0800AA",
+    "K1": 16.1,
+    "K2": 0.83,
+    "n": 2.21,
+    "Time_Constant": 88,
+    "picture": "/assets/products/138Z0800AA.jpg"
+  },
+  {
+    "id": 108,
+    "style": "161W0800AA",
+    "K1": 21.3,
+    "K2": 0.76,
+    "n": 2.39,
+    "Time_Constant": 120,
+    "picture": "/assets/products/161W0800AA.jpg"
+  },
+  {
+    "id": 109,
+    "style": "161W3000XD",
+    "K1": 33.6,
+    "K2": 0.59,
+    "n": 1.82,
+    "Time_Constant": 82,
+    "picture": "/assets/products/161W3000XD.jpg"
+  },
+  {
+    "id": 110,
+    "style": "230W1600AA",
+    "K1": 1.8,
+    "K2": 0.76,
+    "n": 2.89,
+    "Time_Constant": 75,
+    "picture": "/assets/products/230W1600AA.jpg"
+  },
+  {
+    "id": 111,
+    "style": "230W4000VZ",
+    "K1": 25.7,
+    "K2": 0.62,
+    "n": 1.68,
+    "Time_Constant": 144,
+    "picture": "/assets/products/230W4000VZ.jpg"
+  },
+  {
+    "id": 112,
+    "style": "230Z0800HA",
+    "K1": 11,
+    "K2": 0.82,
+    "n": 2.38,
+    "Time_Constant": 130,
+    "picture": "/assets/products/230Z0800HA.jpg"
+  },
+  {
+    "id": 113,
+    "style": "069Z2000AA",
+    "K1": 17.5,
+    "K2": 0.79,
+    "n": 1.87,
+    "Time_Constant": 50,
+    "picture": "/assets/products/069Z2000AA.jpg"
+  },
+  {
+    "id": 114,
+    "style": "230Z4000FA",
+    "K1": 25,
+    "K2": 0.7,
+    "n": 1.64,
+    "Time_Constant": 70,
+    "picture": "/assets/products/230Z4000FA.jpg"
+  },
+  {
+    "id": 115,
+    "style": "138N3000BA",
+    "K1": 22.7,
+    "K2": 0.91,
+    "n": 2.09,
+    "Time_Constant": 82,
+    "picture": "/assets/products/138N3000BA.jpg"
+  },
+  {
+    "id": 116,
+    "style": "025W3000GF",
+    "K1": 26.1,
+    "K2": 0.8,
+    "n": 1.95,
+    "Time_Constant": 37,
+    "picture": "/assets/products/025W3000GF.jpg"
+  },
+  {
+    "id": 117,
+    "style": "015J0060AF",
+    "K1": 9.9,
+    "K2": 0.45,
+    "n": 2.63,
+    "Time_Constant": 60,
+    "picture": "/assets/products/015J0060AF.jpg"
+  },
+  {
+    "id": 119,
+    "style": "025T0300HS",
+    "K1": 19.3,
+    "K2": 0.83,
+    "n": 2.09,
+    "Time_Constant": 35,
+    "picture": "/assets/products/025T0300HS.jpg"
+  },
+  {
+    "id": 120,
+    "style": "069Z3000AX",
+    "K1": 27.8,
+    "K2": 0.72,
+    "n": 1.13,
+    "Time_Constant": 85,
+    "picture": "/assets/products/069Z3000AX.jpg"
+  },
+  {
+    "id": 121,
+    "style": "115N3000AA",
+    "K1": 26,
+    "K2": 0.88,
+    "n": 2.16,
+    "Time_Constant": 88,
+    "picture": "/assets/products/115N3000AA.jpg"
+  },
+  {
+    "id": 122,
+    "style": "138N0812BA",
+    "K1": 14.6,
+    "K2": 0.94,
+    "n": 2.25,
+    "Time_Constant": 82,
+    "picture": "/assets/products/138N0812BA.jpg"
+  },
+  {
+    "id": 123,
+    "style": "138N2000BA",
+    "K1": 26.1,
+    "K2": 0.88,
+    "n": 2.26,
+    "Time_Constant": 82,
+    "picture": "/assets/products/138N2000BA.jpg"
+  },
+  {
+    "id": 124,
+    "style": "138Z2000AR",
+    "K1": 17.7,
+    "K2": 0.69,
+    "n": 1.74,
+    "Time_Constant": 77,
+    "picture": "/assets/products/138Z2000AR.jpg"
+  },
+  {
+    "id": 125,
+    "style": "138Z3000AS",
+    "K1": 22.9,
+    "K2": 0.74,
+    "n": 1.83,
+    "Time_Constant": 67,
+    "picture": "/assets/products/138Z3000AS.jpg"
+  },
+  {
+    "id": 126,
+    "style": "138W4000UU",
+    "K1": 26.6,
+    "K2": 0.74,
+    "n": 1.76,
+    "Time_Constant": 85,
+    "picture": "/assets/products/138W4000UU.jpg"
+  },
+  {
+    "id": 127,
+    "style": "230Z1216BA",
+    "K1": 10.1,
+    "K2": 0.8,
+    "n": 2.32,
+    "Time_Constant": 90,
+    "picture": "/assets/products/230Z1216BA.jpg"
+  }
+]
